@@ -10,9 +10,28 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>itstack-demo-asm-01</module>
+        <module>itstack-demo-asm-02</module>
+        <module>itstack-demo-asm-03</module>
+        <module>itstack-demo-asm-04</module>
+        <module>itstack-demo-asm-05</module>
     </modules>
 
     <dependencies>
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-commons</artifactId>
+            <version>6.2.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.ow2.asm</groupId>
+                    <artifactId>asm-analysis</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.ow2.asm</groupId>
+                    <artifactId>asm-tree</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -23,11 +42,6 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.40</version>
-        </dependency>
-        <dependency>
-            <groupId>asm</groupId>
-            <artifactId>asm-all</artifactId>
-            <version>3.3</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>

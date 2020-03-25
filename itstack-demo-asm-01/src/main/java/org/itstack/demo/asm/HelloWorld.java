@@ -35,7 +35,7 @@ public class HelloWorld extends ClassLoader {
         // 加载常量 load constant
         methodVisitor.visitLdcInsn("Hello World ASM!");
         // 调用方法
-        methodVisitor.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V");
+        methodVisitor.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
         // 返回
         methodVisitor.visitInsn(Opcodes.RETURN);
         // 设置操作数栈的深度和局部变量的大小
@@ -52,8 +52,9 @@ public class HelloWorld extends ClassLoader {
         // 输出类字节码
         FileOutputStream out = null;
         try {
-            out = new FileOutputStream("AsmHelloWorld.class");
-            System.out.println("ASM类输出路径：" + (new File("")).getAbsolutePath());
+            String pathName = HelloWorld.class.getResource("/").getPath() + "AsmHelloWorld.class";
+            out = new FileOutputStream(new File(pathName));
+            System.out.println("ASM类输出路径：" + pathName);
             out.write(bytes);
         } catch (Exception e) {
             e.printStackTrace();
