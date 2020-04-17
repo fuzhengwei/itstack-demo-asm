@@ -2,20 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>itstack-demo-asm</artifactId>
+        <groupId>org.itstack.demo</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.itstack.demo</groupId>
-    <artifactId>itstack-demo-asm</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>itstack-demo-asm-01</module>
-        <module>itstack-demo-asm-02</module>
-        <module>itstack-demo-asm-03</module>
-        <module>itstack-demo-asm-04</module>
-        <module>itstack-demo-asm-05</module>
-        <module>itstack-demo-asm-06</module>
-    </modules>
+    <artifactId>itstack-demo-asm-06</artifactId>
+
 
     <dependencies>
         <dependency>
@@ -42,26 +37,8 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.40</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.7.24</version>
+            <version>1.2.67</version>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.08</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
