@@ -16,7 +16,7 @@ public class SumOfTwo extends ClassLoader {
         byte[] bytes = generate();
         // 输出字节码
         outputClazz(bytes);
-        // 加载AsmHelloWorld
+        // 加载AsmSumOfTwo
         Class<?> clazz = new SumOfTwo().defineClass("org.itstack.demo.asm.AsmSumOfTwo", bytes, 0, bytes.length);
         // 反射获取 main 方法
         Method main = clazz.getMethod("main", String[].class);
